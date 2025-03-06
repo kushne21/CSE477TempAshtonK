@@ -1,0 +1,84 @@
+#piano {
+    position: relative;
+    width: 60vw;
+    margin: auto;
+    padding: 2vh;
+    background-color: #4b4b4b;
+    border-radius: 2vw;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+/* delete later */
+.each_key {
+    display: none;
+}
+
+
+#pianokeys {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 2vh;
+}
+
+#piano:hover .whitekey::after, #piano:hover .blackkey::after {
+    color: rgb(142, 142, 142);
+}
+
+.whitekey::after, .blackkey::after {
+    
+    content: attr(letter);
+    position: absolute;
+    bottom: 0.5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2vw;
+    color: transparent;
+    
+}
+
+.whitekey {
+    width: 6vw;
+    height: 25vh;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 0.2vw solid rgb(0, 0, 0);
+    border-radius: 8%;
+    margin: 0 0.2vw;
+    display: inline-block;
+    position: relative;
+    
+}
+
+.blackkey {
+    width: 4vw;
+    height: 16vh;
+    background-color: rgb(0, 0, 0);
+    
+    position: relative;
+    z-index: 2;
+    margin-left: 0vw;
+    border-radius: 0.5vw;
+}
+
+
+
+
+
+
+#great-old-one {
+    display: none;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+.whitekey.pressed {
+    transform: scale(0.98);
+    
+}
+
+.blackkey.pressed {
+    transform: scale(0.98);
+
+}

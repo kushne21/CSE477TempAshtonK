@@ -1,0 +1,12 @@
+footer {
+    position: block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6vh;
+    
+    background-color: rgb(255, 192, 203);
+    color: rgb(138, 43, 226);
+    text-align: center;
+    justify-content: center;
+}

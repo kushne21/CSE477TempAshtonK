@@ -1,0 +1,108 @@
+nav {
+    position: absolute;  /* Keeps nav at the top */
+    top: 10vh;
+    left: 0;
+    width: 100vw;  /* Full width */
+    height: 10vh;  /* Adjusts dynamically with screen height */
+    background-color: rgb(126, 126, 126);
+    display: flex;
+    justify-content: space-between;  /* Space between items */
+    align-items: center;
+    z-index: 1000;  /* Keeps it above other elements */
+}
+
+/* Left section */
+.navleft {
+    flex: 1; /* Takes up available space */
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: white;
+}
+
+/* Right section */
+.navright {
+    display: flex;
+    align-items: center;
+    gap: 6%; /* Spacing between links */
+    padding: 0 10%;
+}
+
+.menu_icon {
+    display: none; /* Will be shown on small screens */
+    cursor: pointer;
+}
+
+.menu_icon img {
+    width: 8vw;
+    height: auto;
+}
+
+.linkedin_text {
+    display: none;
+}
+
+
+li {
+    font-size: 105%;
+    display: inline;
+    list-style-type: none;
+    
+}
+
+nav a:link {
+    color:rgb(240, 248, 255);
+    text-decoration: none;
+}
+
+nav a:visited {
+    color:rgb(240, 248, 255);
+}
+nav a:hover {
+    opacity: 50%;
+}
+
+nav img {
+    height: 8vh;  /* Adjusts dynamically with screen height */
+    width: auto;
+}
+
+@media screen and (max-width: 650px) {
+    
+    /* Hide the regular nav links */
+    .navright {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 10vh;
+        right: 0;
+        background: rgb(126, 126, 126);
+        width: 100%;
+        text-align: center;
+        padding: 5vw 0;
+    }
+
+    /* Show the menu icon */
+    .menu_icon {
+        display: block;
+        position: absolute;
+        left: 80%;
+        
+    }
+
+    /* Show the menu when it's active */
+    .navright.show {
+        display: flex;
+    }
+
+    /* Replace LinkedIn icon with text */
+    .linkedin-icon {
+        display: none; /* Hide the LinkedIn icon */
+    }
+
+    /* NOT WORKING */
+    .linkedin_text {
+        display: inline; /* Show "LinkedIn" text */
+        font-size: 16vh;
+        font-weight: bold;
+    }
+}
